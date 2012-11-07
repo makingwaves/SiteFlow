@@ -10,12 +10,7 @@
 
 jQuery.noConflict();
 
-jQuery(document).ready(function() {
-    window.setInterval(function() {
-        window.location.reload();
-    }, (site_config['interval']*1000));
-
-    // Handle cookie information related to navigating the site array
+function getSiteIndex() {
     var cookie_name = 'snarx'
     var cookie = jQuery.cookie(cookie_name);
     var index  = 0;
@@ -34,8 +29,10 @@ jQuery(document).ready(function() {
     jQuery.removeCookie(cookie_name);
     jQuery.cookie(cookie_name, index, { expires: 1, path: '/' });
 
-    jQuery("#viewport").attr('src', site_config['sites'][index]);
+    return index;
+}
 
+jQuery(document).ready(function() {;
+    jQuery("#viewport").attr('src', site_config['sites'][getSiteIndex()]);
 });
-
 

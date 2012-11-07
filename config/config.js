@@ -8,7 +8,6 @@
  */
 
 var site_config = {
-    interval: 60, // seconds
     sites: [
       'http://www.vg.no',
       'http://www.db.no',
