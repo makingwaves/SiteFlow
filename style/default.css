@@ -1,0 +1,29 @@
+root {
+    display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #c0c0c0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#header {
+    background: #505151;
+    height: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+#viewport {
+    border: 0;
+    display: block;
+    margin: 0 auto;
+    min-height: 98%;
+    width: 96%;
+}
+
