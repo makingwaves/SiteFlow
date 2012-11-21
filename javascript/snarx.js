@@ -32,7 +32,6 @@ function getSiteIndex() {
     return index;
 }
 
-jQuery(document).ready(function() {;
+jQuery(document).ready(function() {
     jQuery("#viewport").attr('src', site_config['sites'][getSiteIndex()]);
 });
-
