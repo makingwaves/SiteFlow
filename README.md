@@ -1,15 +1,15 @@
 # Snarx Site Carousel #
 
-Description:
-Snarx is a tool for displaying a predefined list of sites in a carousel manner on a given
-time interval.
-
+## Landing pages ##
+ * index.html - cookie based for server use
+ * local.html - sessvars based for non servers
 
 
 ## Configuration ##
+
 ### Available sites ###
-Which sites to display and in which order is set in 'config/config.js' file of this
-application.
+Sites available to this carousel is defined in the Javascript file 'config/config.js'. Following
+is an example how to add the sites of "Verdens Gang" and "Dagbladet":
 
 var site_config = {
     sites: [
@@ -21,9 +21,11 @@ var site_config = {
 
 ### Page refresh rate ###
 
-    To configure the page refresh timeout for this application you must identify the following line
-    in either 'local.html' or 'index.html', and change the 'content' attribute to your needs (time
-    in seconds):
+The number of seconds of between page refresh is configured directly in the HTML code
+of each landing page (index.html, local.html).
+
+Changing the refresh rate is done by looking for the following line and change the "content"
+attribute:
 
     "<meta http-equiv="refresh" content="30">"
 
