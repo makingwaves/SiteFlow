@@ -10,7 +10,8 @@ Snarx is an HTML and Javascript based site display carousel.
 ## Installation ##
 
 ### Server ###
-Drop this application into webroot and use the landing page 'index.html' to serve content.
+Drop this application into webroot and use the landing page 'index.html' to serve content. 
+Note: If you wish to avoid using cookies you can simply use 'local.html' (or just rename it).
 
 ### Local desktop ###
 For local installation you can drop the application to anywhere sees fit. Load the 'local.html'
