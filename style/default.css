@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background-color: #c0c0c0;
+    background-color: #ffffff;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -23,7 +23,12 @@ body {
     border: 0;
     display: block;
     margin: 0 auto;
-    min-height: 98%;
-    width: 96%;
+    min-height: 100%;
+    width: 100%;
+}
+
+/* Background color for sleeping */
+.black {
+    background-color: #000000;
 }
 
