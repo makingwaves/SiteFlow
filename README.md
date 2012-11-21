@@ -32,7 +32,10 @@ is an example how to add the sites of "Verdens Gang" and "Dagbladet":
          ]
      };
 
-Snarx will load each site in order. Note: remember to terminate each line with an ',' - except for the last entry.
+Notes
+* Snarx will load each site in order. Note: remember to terminate each line with an ',' - except for the last entry.
+* Remember to flush cookies if using 'index.html' to make the changes apply correctly
+* Remember to close the browser and the tab Snarx is running in if using 'local.html' to make the changes apply correctly.
 
 ### Page refresh rate ###
 
