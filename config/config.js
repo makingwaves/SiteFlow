@@ -11,10 +11,6 @@ var site_config = {
     sites: [
       'http://www.vg.no',
       'http://www.db.no',
-      'http://www.aftenposten.no',
-      'http://www.nettavisen.no',
-      'http://www.glomdalen.no',
-      'http://www.itavisen.no',
-      'http://www.digi.no'
+      'http://www.aftenposten.no'
     ]
 };
