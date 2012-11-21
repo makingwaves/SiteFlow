@@ -11,12 +11,13 @@
 Sites available to this carousel is defined in the Javascript file 'config/config.js'. Following
 is an example how to add the sites of "Verdens Gang" and "Dagbladet":
 
-var site_config = {
-    sites: [
-      'http://www.vg.no',
-      'http://www.db.no'
-    ]
-};
+Example:
+    var site_config = {
+        sites: [
+            'http://www.vg.no',
+            'http://www.db.no'
+        ]
+    };
 
 
 ### Page refresh rate ###
