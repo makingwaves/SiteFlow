@@ -12,28 +12,16 @@ Drop code folder into webroot and load the index.html file using a browser, eith
 network or directly from HDD.
 
 ## Configuration ##
-Configuration of opening hours and which sites to load in done through
-editing the file 'config/config.js'.
+Configuration is done through editing the file 'config/config.js'.
 
 #### Example ####
 
      var site_config = {
-          lock: {
-               start: "1700",
-               end: "0700"
-          },
           sites: [
               "http://www.vg.no",
               "http://www.db.no"
           ]
      };
-
-#### Section 'lock' ####
-This section is for configuring when the sites opens and closes. 
-Time is given in format "hhmm", e.g. "0700" for 07 in the morning.
-
-Setting 'start': when to close
-Setting 'end': when to open
 
 #### Section 'sites' ####
 This section holds the list of available site to be selected at
