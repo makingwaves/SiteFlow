@@ -10,36 +10,47 @@
 
 jQuery.noConflict();
 
-function isSiteClosed(config)
+/**
+ * Format time pieces i "xx" format
+ */
+function formatTime(time)
 {
-    var start = parseInt(config.lock.start);
-    var end = parseInt(config.lock.end);
-    var date_object = new Date();
-    var current_time = parseInt(date_object.getHours() + "" + date_object.getMinutes());
-
-    // console.log("Curr " + current_time);
-    // console.log("Close " + start + " Open " + end);
-
-    // Before midnight
-    if(current_time >= start)
-    {
-        console.log("curr > start");
-        return (current_time < end) ? true : false;
-    }
-
-    // After midnight
-    else if(current_time <= start)
-    {
-        console.log('"curr < start');
-        return (current_time < end) ? true : false;
-    }
+    if(time < 10) time = "0" + time;
+    return String(time);
 }
 
+/**
+ * Testing current time is between opening hours - e.g. closed or not.
+ */
+function isSiteClosed(config)
+{
+    var dateObject = new Date();
+    var current = parseInt(formatTime(dateObject.getHours()).concat(formatTime(dateObject.getMinutes())));
+    var start   = parseInt(formatTime(config.lock.start));
+    var end     = parseInt(formatTime(config.lock.end));
+    var locked  = true;
+    
+    if(start >= end && current >= end && current < start)
+    {
+        locked = false;
+    }
+    else if (start <= end && current >= start && current >= end)
+    {
+        locked = false;
+    }
+
+    return locked;
+}
+
+/**
+ * Fetch random site from a predefined list. If outside
+ * opening hours a black page is shown instead. 
+ */
 function getRandomSite(viewportId)
 {
     if(isSiteClosed(site_config) === true)
     {
-        jQuery(viewportId).attr("src", 'black.html');
+        jQuery(viewportId).attr("src", "black.html");
     }
     else
     {
