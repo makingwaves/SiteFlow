@@ -1,49 +1,50 @@
-# Snarx Site Carousel #
+# SiteFlow Site Carousel #
 
 ## Description ##
-Snarx is an HTML and Javascript based site display carousel.
+SiteFlow is an HTML and Javascript based site display carousel that shows sites
+randomly.
 
-## Landing pages ##
- * index.html - cookie based for server use
- * local.html - sessvars based for non servers
+SiteFlow contains an iframe in index.html that shows the selected site. Sites are
+shown as is. No speed or size enhancements available.
 
 ## Installation ##
-
-### Server ###
-Drop this application into webroot and use the landing page 'index.html' to serve content. 
-Note: If you wish to avoid using cookies you can simply use 'local.html' (or just rename it).
-
-### Local desktop ###
-For local installation you can drop the application to anywhere sees fit. Load the 'local.html'
-landing page by opening it as a file from your browser ('file:///path_to_landing_page)'.
+Drop code folder into webroot and load the index.html file using a browser, either over the
+network or directly from HDD.
 
 ## Configuration ##
-
-### Available sites ###
-Sites available to this carousel is defined in the Javascript file 'config/config.js'. Following
-is an example how to add the sites of "Verdens Gang" and "Dagbladet":
+Configuration of opening hours and which sites to load in done through
+editing the file 'config/config.js'.
 
 #### Example ####
 
      var site_config = {
-         sites: [
-             'http://www.vg.no',
-             'http://www.db.no'
-         ]
+          lock: {
+               start: "1700",
+               end: "0700"
+          },
+          sites: [
+              "http://www.vg.no",
+              "http://www.db.no"
+          ]
      };
 
-Notes
-* Snarx will load each site in order. Note: remember to terminate each line with an ',' - except for the last entry.
-* Remember to flush cookies if using 'index.html' to make the changes apply correctly
-* Remember to close the browser and the tab Snarx is running in if using 'local.html' to make the changes apply correctly.
+#### Section 'lock' ####
+This section is for configuring when the sites opens and closes. 
+Time is given in format "hhmm", e.g. "0700" for 07 in the morning.
+
+Setting 'start': when to close
+Setting 'end': when to open
+
+#### Section 'sites' ####
+This section holds the list of available site to be selected at
+random.
 
 ### Page refresh rate ###
 
-The number of seconds of between page refresh is configured directly in the HTML code
-of each landing page (index.html, local.html).
+Changing the page refresh rate is done through editing of the
+HTML meta refresh option found in the header section of index.html.
+Rate is given in seconds. Depending of the size pr. site consider
+making this setting relatively high (above 60 seconds).
 
-Changing the refresh rate is done by looking for the following line and change the 'content'
-attribute:
-
-    "<meta http-equiv="refresh" content="30">"
+     "<meta http-equiv="refresh" content="60">"
 
