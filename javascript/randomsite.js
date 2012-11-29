@@ -1,5 +1,5 @@
 /**
- * Snarx Site Carousel
+ * SiteFlow Site Carousel
  *
  * Main functionality for showing sites in an
  * iframe in an carousel manner.
