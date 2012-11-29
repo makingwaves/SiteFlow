@@ -9,8 +9,8 @@
 
 var site_config = {
     lock: {
-        start: "2359",
-        end: "0001"
+        start: "1700",
+        end: "0700"
     },
     sites: [
         "http://www.norsk.dk",
