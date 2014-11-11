@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twitter Timeline</title>
+        <link rel="stylesheet" type="text/css" href="../style/twitter.css" />
+        <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+        <script>
+            jQuery.noConflict();
+            
+            jQuery.extend({
+                getQueryParameters : function(str) {
+                    return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+                }  
+            });
+            
+            jQuery(document).ready(function() {
+                var queryParams = jQuery.getQueryParameters();
+                jQuery("div#main a").attr("data-screen-name", queryParams.user);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <img id="logo" src="../img/twitterlogo.png" />  
+        </div>
+
+        <div id="main">
+            <a class="twitter-timeline"
+               href="https://twitter.com/"
+               data-widget-id=""
+               data-show-replies="false"
+               data-tweet-limit="25"
+               data-theme="light"
+               data-chrome="nofooter noheader"
+               data-screen-name="">Tweets Timeline</a>
+            <script type="text/javascript" src="../javascript/twitter.js"></script>
+        </div>
+    </body>
+</html>
