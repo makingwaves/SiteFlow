@@ -9,8 +9,32 @@
 
 var site_config = {
     sites: [
+        /*
+         * Example: Twitter Timelines for users
+         * Note: You don't have to put them into
+         * bulk like this - feel freely to insert
+         * them randomly in the source set.
+         */
+        "http://localhost:5000/twitter/tweets.html?user=Utenriksdept",
+        "http://localhost:5000/twitter/tweets.html?user=Regjeringen",
+        /*
+        "http://localhost:5000/twitter/mfa-tweets.html?user=norway_uae",
+        "http://localhost:5000/twitter/mfa-tweets.html?user=Luftforsvaret",
+        "http://localhost:5000/twitter/mfa-tweets.html?user=heimevernet",
+        "http://localhost:5000/twitter/mfa-tweets.html?user=NATO",
+        "http://localhost:5000/twitter/mfa-tweets.html?user=HMKongensGarde",
+        "http://localhost:5000/twitter/mfa-tweets.html?user=kriseinfo_no",
+        */
+        
+        /*
+         * Example: Ordinary web sites
+         * Note: You don't have to put them into
+         * bulk like this - feel freely to insert
+         * them randomly in the source set.
+         */
         "http://www.norsk.dk",
         "http://www.norge.dk",
+        /*
         "http://www.norge.fi",
         "http://www.norja.fi",
         "http://www.norge.se",
@@ -114,5 +138,6 @@ var site_config = {
         "http://www.norway-osce.org",
         "http://www.norway-un.org",
         "http://www.norway-geneva.org"
+        */
     ]
 };
