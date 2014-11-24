@@ -14,9 +14,12 @@ var site_config = {
          * Note: You don't have to put them into
          * bulk like this - feel freely to insert
          * them randomly in the source set.
+         *
+         * NOTE: Twitter username should be all in
+         * lowercase. 
          */
-        "http://localhost:5000/twitter/tweets.html?user=Utenriksdept",
-        "http://localhost:5000/twitter/tweets.html?user=Regjeringen",
+        "http://localhost:5000/twitter/tweets.html?user=utenriksdept",
+        "http://localhost:5000/twitter/tweets.html?user=regjeringen",
         /*
         "http://localhost:5000/twitter/mfa-tweets.html?user=norway_uae",
         "http://localhost:5000/twitter/mfa-tweets.html?user=Luftforsvaret",
