@@ -1,10 +1,132 @@
+@font-face {
+    font-family: billabong;
+    src: url(../fonts/Billabong.ttf);
+}
+
+body {
+    background-color: #262626;
+    font-family: verdana;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+/**
+ * Containers
+ */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+/**
+ * Floats
+ */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/**
+ * Logo and username
+ */
+
+.grayishtext {
+    color: #eaeaea;
+}
+.logo {
+    color: #ffffff;
+    font-family: billabong;
+    font-size: 45px;
+}
+
+.username {
+    font-family: "Hammersmith One";
+    font-size: 40px;
+}
+
+/**
+ * Images and image list
+ */
+
+.imagelist {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.imagelist li {
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+/*
+#header {
+    color: #ffffff;
+    font-family: billabong;
+    font-size: 45px;
+    height: 50px;
+}
+
+#infobox {
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+
+#instagramuser {
+    color: #eaeaea;
+    float: right;
+    font-family: "Hammersmith One";
+    font-size: 40px;
+}
+
+#instagramlogo {
+    color: #eaeaea;
+    float: left;
+    font-family: billabong;
+    font-size: 45px;
+}
+
+#main {
+    margin: 0 auto;
+
+    width: 995px;
+}
+
+#main span {
+    background-color: red;
+    display: block;
+}
+
 ul {
-    columns: 3;
-    -webkit-columns: 3;
-    -moz-columns: 3;
+    background-color: green;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
 li {
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
     display: inline-block;
+    margin: 5px;
+    padding: 5px;
 }
+*/
