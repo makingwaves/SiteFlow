@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instagram</title>
+        <link rel="stylesheet" type="text/css" href="../style/instagram.css" />
+        <script type="text/javascript" src="../javascript/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../javascript/social/spectragram.js"></script>
+        <script>            
+            jQuery.fn.spectragram.accessData = {
+                accessToken: '1573464007.c67b99a.200f40a42e9342089802df505f2b95b1',
+                clientID: 'c67b99ad02084a5c87962c2f9c31fa3d'
+            };
+        </script>       
+    </head>
+    <body>
+        <ul></ul>
+        <div id="instafeed"></div>
+        <script>
+            $('ul').spectragram('getUserFeed',{
+                query: 'nrjnorge',
+                max: 25,
+                size: 'small'
+            });
+        </script>
+    </body>
+</html>
