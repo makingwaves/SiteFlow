@@ -4,15 +4,8 @@
         <title>Twitter Timeline</title>
         <link rel="stylesheet" type="text/css" href="../style/twitter.css" />
         <script type="text/javascript" src="../javascript/jquery/jquery-2.1.1.min.js"></script>
-        <script>
-            jQuery.noConflict();
-            
-            jQuery.extend({
-                getQueryParameters : function(str) {
-                    return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
-                }  
-            });
-            
+        <script type="text/javascript" src="../javascript/syslib.js"></script>
+        <script>            
             jQuery(document).ready(function() {
                 var queryParams = jQuery.getQueryParameters();
                 jQuery("div#main a").attr("data-screen-name", queryParams.user);
