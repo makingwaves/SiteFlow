@@ -36,3 +36,26 @@ making this setting relatively high (above 60 seconds).
 
      "<meta http-equiv="refresh" content="60">"
 
+
+## Social Account Setup ##
+
+### Instagram ###
+
+In order to make any use of Instagram we must configure it for our system. Here goes:
+
+#### Creating an application ####
+1. Visit http://instagram.com/developer/
+2. Log in
+3. Click the 'Manage Clients' button.
+4. Click the 'Register a New Client' button.
+5. Fill in the form: both 'Website' and 'Oauth redirect_uri' should be set to 'http://localhost'. Make sure the checkbox 'Disable implicit OAuth' is checked.
+6. Enter Captcha.
+7. Click the 'Register' button.
+8. On the following screen, copy the 'Client ID' and paste this into the config.js file under the social->instagram->client_id setting.
+
+#### Getting access token ####
+
+1. Follow this tutorial: http://jelled.com/instagram/access-token
+2. Copy and paste the access token into the config.js file under the social->instagram->access_token setting.
+3. Done. Rock and roll.
+
