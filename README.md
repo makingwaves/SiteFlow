@@ -56,6 +56,17 @@ In order to make any use of Instagram we must configure it for our system. Here 
 #### Getting access token ####
 
 1. Follow this tutorial: http://jelled.com/instagram/access-token
-2. Copy and paste the access token into the config.js file under the social->instagram->access_token setting.
+2. Copy and paste the access token into the config.js file under the social->instagram->access_token setting (if you can't find it, look at the URL).
 3. Done. Rock and roll.
+
+### Flickr ###
+
+In order to make any use of Flickr we must configure it for our system. Here goes:
+
+1. Log into your Flickr account
+2. Go to https://www.flickr.com/services/apps/create/ and requst an API key
+3. Next, apply for an non commercial key
+4. Fill out the form.
+5. Copy and paste the API key into the config.js file under the social->flickr->api_key setting (if you can't find it, look in the URL).
+
 
