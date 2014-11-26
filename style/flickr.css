@@ -45,12 +45,10 @@ body {
     color: #eaeaea;
 }
 .logo {
-    font-family: billabong;
     font-size: 45px;
 }
 
 .username {
-    font-family: "Hammersmith One";
     font-size: 40px;
 }
 
@@ -65,10 +63,7 @@ body {
 }
 
 .imagelist li {
-    background-color: #eaeaea;
-    border: 1px solid #eaeaea;
-    border-radius: 5px;
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
+    margin: 3px;
+    padding: 3px;
 }

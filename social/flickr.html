@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flickr</title>
+        <link rel="stylesheet" type="text/css" href="../style/flickr.css" />
+        <script type="text/javascript" src="../javascript/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../javascript/syslib.js"></script>
+        <script>            
+            jQuery(document).ready(function() {
+                var queryParams = jQuery.getQueryParameters();
+                var url = "https://api.flickr.com/services/feeds/photos_public.gne?id="+ queryParams.user +"&lang=en-us&format=json&jsoncallback=?";
+                // https://api.flickr.com/services/feeds/photos_public.gne?%20id=92114370@N02&lang=en-us&format=json#
+                // "https://api.flickr.com/services/feeds/photos_public.gne?id=92114370@N02&lang=en-us&format=json&jsoncallback=?"
+                
+                jQuery(".username").text(queryParams.user);
+                
+                jQuery.getJSON(url, function(data){
+                    jQuery.each(data.items, function(i,item){
+                        var li = jQuery("<li>");
+                        var image = jQuery("<img>");
+                        image.attr("src", item.media.m);
+                        image.text(item.title);
+                        li.append(image)
+                        
+                        console.log(item); 
+                        
+                        jQuery("#flickrgallery").append(li);
+                    });
+
+                  });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <span class="logo grayishtext">Flickr</span>
+            <span class="username right grayishtext">FLICKR_USERNAME</span>
+        </div>
+        <div class="container">
+            <ul id="flickrgallery" class="imagelist"></ul>
+        </div>
+       
+    </body>
+</html>
