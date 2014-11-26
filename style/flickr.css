@@ -8,14 +8,6 @@ body {
     font-family: verdana;
 }
 
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
 /**
  * Containers
  */
@@ -49,7 +41,7 @@ body {
 }
 
 .username {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 /**
@@ -66,4 +58,18 @@ body {
     display: inline-block;
     margin: 3px;
     padding: 3px;
+}
+
+/**
+ * Error box
+ */
+
+.errorbox {
+    background-color: salmon;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    color: black;
+    display: none;
+    font-weight: bold;
+    padding: 10px;
 }

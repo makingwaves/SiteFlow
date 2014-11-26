@@ -4,37 +4,76 @@
         <title>Flickr</title>
         <link rel="stylesheet" type="text/css" href="../style/flickr.css" />
         <script type="text/javascript" src="../javascript/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../config/config.js"></script>
         <script type="text/javascript" src="../javascript/syslib.js"></script>
-        <script>            
+        <script>
+            function doerror() {
+                jQuery('.container').hide();
+                jQuery('.errorbox').show();
+            }
+            
             jQuery(document).ready(function() {
                 var queryParams = jQuery.getQueryParameters();
-                var url = "https://api.flickr.com/services/feeds/photos_public.gne?id="+ queryParams.user +"&lang=en-us&format=json&jsoncallback=?";
-                // https://api.flickr.com/services/feeds/photos_public.gne?%20id=92114370@N02&lang=en-us&format=json#
-                // "https://api.flickr.com/services/feeds/photos_public.gne?id=92114370@N02&lang=en-us&format=json&jsoncallback=?"
+                var flickr_config = site_config.social.flickr;
+                            
+                var userinfourl = [
+                        'https://api.flickr.com/services/rest/?method=flickr.people.findByUsername',
+                        '&api_key='.concat(flickr_config.api_key),
+                        '&username='.concat(queryParams.user),
+                        '&format=json',
+                        '&jsoncallback=?'
+                    ].join('');
                 
-                jQuery(".username").text(queryParams.user);
-                
-                jQuery.getJSON(url, function(data){
-                    jQuery.each(data.items, function(i,item){
-                        var li = jQuery("<li>");
-                        var image = jQuery("<img>");
-                        image.attr("src", item.media.m);
-                        image.text(item.title);
-                        li.append(image)
+                jQuery.getJSON(userinfourl, function(userinfo) {
+                        if(userinfo.stat == 'ok') {
+                            // Update header with username
+                            jQuery(".username").text(userinfo.user.username._content);
                         
-                        console.log(item); 
-                        
-                        jQuery("#flickrgallery").append(li);
+                            // Get public image feed
+                            var imageslisturl = [
+                                    'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos',
+                                    '&api_key='.concat(flickr_config['api_key']),
+                                    '&user_id='.concat(userinfo.user.nsid),
+                                    '&format=json',
+                                    '&per_page='.concat(flickr_config.max_elements),
+                                    '&extras=url_s,url_sq, url_q',
+                                    '&jsoncallback=?'
+                                ].join('');
+                            
+                            jQuery.getJSON(imageslisturl, function(imagelist) {
+                                    if(imagelist.stat == 'ok') {
+                                        jQuery.each(imagelist.photos.photo, function(i, image) {
+                                                jQuery("#flickrgallery").append(
+                                                        jQuery("<li>").append(jQuery("<img>").attr("src", image.url_q))
+                                                    );
+                                            });
+                                    } else {
+                                        doerror();
+                                    }
+                                });
+                        } else {
+                            doerror();
+                        }
                     });
-
-                  });
             });
         </script>
     </head>
     <body>
+        <div class="errorbox container">
+            <p>
+                Oops ... Seems like something is wrong. Here are some reminders to check out:
+                <ul>
+                    <li>Is the Flickr username correct?</li>
+                    <li>Are you sure the user has a Flickr username?</li>
+                    <li>Are you sure the user has his/her/it's images set to public?</li>
+                    <li>Do the user has any images, at all?</li>
+                </ul>
+            </p>
+        </div>
+        
         <div class="container">
-            <span class="logo grayishtext">Flickr</span>
-            <span class="username right grayishtext">FLICKR_USERNAME</span>
+            <span class="username grayishtext"></span>
+            <span class="logo right"><img src="https://s.yimg.com/pw/images/goodies/black-flickr.png" width="56" height="26" alt=""</span>
         </div>
         <div class="container">
             <ul id="flickrgallery" class="imagelist"></ul>
