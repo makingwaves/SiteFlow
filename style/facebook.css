@@ -1,0 +1,89 @@
+@font-face {
+    font-family: billabong;
+    src: url(../fonts/Billabong.ttf);
+}
+
+body {
+    background-color: #3b5998;
+    font-family: verdana;
+    height: 100%;
+    margin: 0;
+}
+
+.border {
+    border: 1px solid #eaeaea; 
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+/**
+ * Containers
+ */
+
+.whitebg {
+    background-color: #ffffff;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+/**
+ * Floats
+ */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/**
+ * Logo and username
+ */
+
+.grayishtext {
+    color: #eaeaea;
+}
+.logo {
+    font-size: 45px;
+}
+
+.username {
+    font-size: 35px;
+}
+
+/**
+ * Images and image list
+ */
+
+.imagelist {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.imagelist li {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px;
+}
+
+/**
+ * Error box
+ */
+
+.errorbox {
+    background-color: salmon;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    color: black;
+    display: none;
+    font-weight: bold;
+    padding: 10px;
+}

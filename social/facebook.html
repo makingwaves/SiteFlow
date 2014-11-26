@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook</title>
+        <link rel="stylesheet" type="text/css" href="../style/facebook.css" />
+        <script type="text/javascript" src="../javascript/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../config/config.js"></script>
+        <script type="text/javascript" src="../javascript/syslib.js"></script>
+        <script>
+            jQuery(document).ready(function() {
+                var queryParams = jQuery.getQueryParameters();
+                var windowheight = jQuery(window).height();
+                var profileurl = [
+                        'https://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/',
+                        queryParams.user,
+                        '&width',
+                        '&height='.concat(windowheight),
+                        '&colorscheme=light',
+                        '&show_faces=false',
+                        '&header=false',
+                        '&stream=true',
+                        '&show_border=false'                  
+                    ].join('');
+
+                    jQuery("#profileframe").attr('src', profileurl);
+                    jQuery("#profileframe").css('height', windowheight-10);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container whitebg border">
+            <iframe
+                id="profileframe"
+                src=""
+                scrolling="no"
+                frameborder="0"
+                class="fullwidth"
+                style="border:none; overflow:hidden;"
+                allowTransparency="false"></iframe>
+        </div>
+    </body>
+</html>
