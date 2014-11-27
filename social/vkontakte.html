@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VK.com</title>
+        <link rel="stylesheet" type="text/css" href="../style/vkontakte.css" />
+        <script type="text/javascript" src="../javascript/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../javascript/syslib.js"></script>
+        <script type="text/javascript" src=http://vk.com/js/api/openapi.js?115"></script>
+        <script>
+            var queryParams = jQuery.getQueryParameters();
+        </script>
+    </head>
+    <body>
+        <!-- VK Widget -->
+        <div class="container">
+            <div id="vk_groups"></div>
+            <script type="text/javascript"> 
+                VK.Widgets.Group("vk_groups", {mode: 2, width: jQuery('.container').width(), height: jQuery(document).height()}, queryParams.user);
+            </script>
+        </div>
+    </body>
+</html>

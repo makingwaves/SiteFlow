@@ -90,4 +90,6 @@ In order to make any use of Flickr we must configure it for our system. Here goe
 4. Fill out the form.
 5. Copy and paste the API key into the config.js file under the social->flickr->api_key setting (if you can't find it, look in the URL).
 
+### VKontakte ###
 
+There are no configurable options regarding VKontakte. 
