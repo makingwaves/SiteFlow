@@ -41,7 +41,7 @@ making this setting relatively high (above 60 seconds).
 
 ### Weibo ###
 There are no configurable sections devoted to Weibo in this release. From testing we've seen that user profiles
-are viewable by using the stock functionality of SiteFlow. This means, in ordert to show a Weibo account just put
+are viewable by using the stock functionality of SiteFlow. This means, in order to show a Weibo account just put
 the URL in the 'sites' section of the configuration file. As like you would do with any ordinary URL.
 
 ### Twitter ###
