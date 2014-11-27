@@ -39,6 +39,27 @@ making this setting relatively high (above 60 seconds).
 
 ## Social Account Setup ##
 
+### Weibo ###
+There are no configurable sections devoted to Weibo in this release. From testing we've seen that user profiles
+are viewable by using the stock functionality of SiteFlow. This means, in ordert to show a Weibo account just put
+the URL in the 'sites' section of the configuration file. As like you would do with any ordinary URL.
+
+### Twitter ###
+
+In order to make any use of Twitter we must configure it for our system. Here goes:
+
+#### Creating a widget ####
+1. Log into your Twitter account
+2. Go to account settings
+3. Click on 'Widgets'
+4. Click on 'Create new'
+5. Select 'User timeline'
+6. Click on 'Create widget'
+7. Copy and paste the HTML code for the widget into Notepad (or some other editor)
+8. Find the value for the "data-widget-id" attribute of the <a> HTML element and copy just the value.
+9. In SiteFlow codebase, paste the value from step 8 into the corresponding attribute "data-widget-id"
+10. Save. Done
+
 ### Instagram ###
 
 In order to make any use of Instagram we must configure it for our system. Here goes:
