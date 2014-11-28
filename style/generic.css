@@ -59,6 +59,14 @@
     font-size: 35px;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
 /**
  * Lists
  */
@@ -118,6 +126,10 @@
 
 .billabongfont {
     font-family: billabong;
+}
+
+.merriweatherfont {
+    font-family: 'Merriweather Sans', sans-serif;
 }
     
 
