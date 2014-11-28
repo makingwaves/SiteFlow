@@ -42,6 +42,10 @@
     border: 1px solid #eaeaea; 
 }
 
+.shadow {
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.35);
+}
+
 /**
  * Fonts
  */
@@ -100,9 +104,11 @@
 }
 
 .instagramlist li {
+    /*
     background-color: #eaeaea;
     border: 1px solid #eaeaea;
     border-radius: 5px;
+    */
     display: inline-block;
     margin: 5px;
     padding: 5px;
