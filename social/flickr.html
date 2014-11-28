@@ -27,7 +27,7 @@
                 jQuery.getJSON(userinfourl, function(userinfo) {
                         if(userinfo.stat == 'ok') {
                             // Update header with username
-                            jQuery(".username").text(userinfo.user.username._content);
+                            jQuery("#username").text(userinfo.user.username._content);
                         
                             // Get public image feed
                             var imageslisturl = [
@@ -72,7 +72,7 @@
         </div>
         
         <div class="container">
-            <span class="font45 grayishtext"></span>
+            <span class="font45 grayishtext" id="username"> </span>
             <span class="font35 right"><img src="https://s.yimg.com/pw/images/goodies/black-flickr.png" width="56" height="26" alt=""</span>
         </div>
         <div class="container">
