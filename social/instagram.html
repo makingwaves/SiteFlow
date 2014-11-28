@@ -24,14 +24,14 @@
                     size: insta_config["image_size"]
                 });
                 
-                jQuery(".username").text(queryParams.user);
+                jQuery("#username").text(queryParams.user);
             });
         </script>       
     </head>
     <body class="defaultfont socialgreybg">
             <div class="container">
-                <span class="font35 grayishtext">Instagram</span>
-                <span class="font45 right grayishtext">INSTAGRAM_USERNAME</span>
+                <span class="font35 grayishtext billabongfont">Instagram</span>
+                <span id="username" class="font45 right grayishtext">INSTAGRAM_USERNAME</span>
             </div>
             <div class="container">
                 <ul id="instafeed" class="instagramlist"></ul>

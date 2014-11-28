@@ -90,5 +90,34 @@
 .sociallightbg {
    background-color: #fafafa;
 }
+
+.instagramlist li {
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.errorbox {
+    background-color: salmon;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    color: black;
+    display: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+@font-face {
+    font-family: billabong;
+    src: url(../fonts/Billabong.ttf);
+}
+
+.billabongfont {
+    font-family: billabong;
+}
     
 
