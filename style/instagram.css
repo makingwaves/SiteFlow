@@ -1,68 +1,6 @@
-@font-face {
-    font-family: billabong;
-    src: url(../fonts/Billabong.ttf);
-}
-
-body {
-    background-color: #262626;
-    font-family: verdana;
-}
-
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
-/**
- * Containers
- */
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-}
-
-/**
- * Floats
- */
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-/**
- * Logo and username
- */
-
-.grayishtext {
-    color: #eaeaea;
-}
-.logo {
-    font-family: billabong;
-    font-size: 45px;
-}
-
-.username {
-    font-family: "Hammersmith One";
-    font-size: 40px;
-}
-
 /**
  * Images and image list
  */
-
-.imagelist {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
 
 .imagelist li {
     background-color: #eaeaea;

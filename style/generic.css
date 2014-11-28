@@ -1,0 +1,94 @@
+/**
+ * Layouts
+ */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.fullheight {
+    height: 100%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.zeromargin {
+    margin: 0;
+}
+
+/**
+ * Colors
+ */
+.grayishtext {
+    color: #eaeaea;
+}
+
+.whitebg {
+    background-color: #ffffff;
+}
+
+.border {
+    border: 1px solid #eaeaea; 
+}
+
+/**
+ * Fonts
+ */
+
+.defaultfont {
+    font-family: verdana arial;
+    font-size: 14px;
+}
+
+.font45 {
+    font-size: 45px;
+}
+
+.font35 {
+    font-size: 35px;
+}
+
+/**
+ * Lists
+ */
+
+.imagelist {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.imagelist li {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px;
+}
+
+/**
+ * Social plugins
+ */
+
+.socialbluebg {
+    background-color: #3b5998;
+}
+
+.socialgreybg {
+    background-color: #262626;
+}
+
+.sociallightbg {
+   background-color: #fafafa;
+}
+    
+
