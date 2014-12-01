@@ -1,0 +1,8 @@
+Integration point needed for Udir
+
+[ DONE ] twitter
+[ DONE ] facebook
+[ DONE ] flickr
+[ DONE ] Instagram
+[ DONE ] weibo
+[ DONE ] vkontakte
